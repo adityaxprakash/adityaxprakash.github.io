@@ -12,4 +12,13 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const poems = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/poems' }),
+  schema: z.object({
+    title: z.string(),
+    date: z.date().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { blog, poems };
