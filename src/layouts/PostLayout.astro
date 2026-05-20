@@ -100,16 +100,38 @@ const { title, date, description, tags, backHref, backLabel } = Astro.props;
     }
 
     .prose {
-        color: #eee;
         line-height: 1.9;
         font-size: 16px;
+    }
+
+    :global(.prose h1) {
+        color: #e8e8e8;
+    }
+
+    :global(.prose h2) {
+        color: #eee;
+    }
+
+    :global(.prose h3) {
+        color: #ccc;
+    }
+
+    :global(.prose p) {
+        color: #aaa;
+    }
+
+    :global(.prose li) {
+        color: #aaa;
+    }
+
+    :global(.prose blockquote) {
+        color: #555;
     }
 
     .prose h2,
     .prose h3 {
         font-size: 13px;
         font-weight: 600;
-        color: #ccc;
         margin: 2rem 0 0.6rem;
         letter-spacing: -0.01em;
     }
